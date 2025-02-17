@@ -1,0 +1,19 @@
+﻿<Window x:Class="CefSharpWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:CefSharpWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+        <DockPanel DockPanel.Dock="Top" Height="26">
+            <Button x:Name="GoButton" Content="Button" Width="42" DockPanel.Dock="Right" Click="GoButton_Click"/>
+            <TextBox x:Name="UrlBox" TextWrapping="Wrap" Text="https://www.microsoft.com/"/>
+        </DockPanel>
+        <cefSharp:ChromiumWebBrowser x:Name="WB" Initialized="WB_Initialized"/>
+        </DockPanel>
+    </Grid>
+</Window>
